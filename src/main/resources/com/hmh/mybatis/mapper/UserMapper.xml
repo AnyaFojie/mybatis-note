@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+namespce：命名空间，用于对sql进行分类管理，便于后期维护
+-->
+<mapper namespace="com.hmh.mybatis.mapper.UserMapper">
+  <select id="selectAll" resultType="User">
+    select * from tb_user;
+  </select>
+</mapper>

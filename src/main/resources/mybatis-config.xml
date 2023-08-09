@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <typeAliases>
+    <package name="com.hmh.mybatis.pojo"/>
+  </typeAliases>
+
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <!--数据库连接-->
+        <property name="driver" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/mybatis?useSSl=false"/>
+        <property name="username" value="root"/>
+        <property name="password" value="Aviciiforever"/>
+      </dataSource>
+    </environment>
+  </environments>
+  <mappers>
+    <!--加载sql的映射文件-->
+    <!--<mapper resource="com/hmh/mybatis/mapper/UserMapper.xml"/>-->
+    <!--Mapper代理方式-->
+    <package name="com.hmh.mybatis.mapper"/>
+  </mappers>
+</configuration>
